@@ -1,0 +1,15 @@
+{% extends './base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="w-full max-w-5xl mx-auto px-4">
+    <form action="{% url 'turbo-drive:create' %}" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <p>
+            <input type="submit" value="Save" class="btn-blue">
+        </p>
+    </form>
+</div>
+{% endblock %}

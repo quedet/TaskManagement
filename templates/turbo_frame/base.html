@@ -1,0 +1,25 @@
+{% load webpack_loader static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+
+    {% stylesheet_pack 'app' %}
+
+    {% stylesheet_pack 'turbo_frame' %}
+    {% javascript_pack 'turbo_frame' attrs='defer data-turbo-track="reload"' %}
+</head>
+<body>
+    {% include 'turbo_frame/navbar.html' %}
+    
+    {% include 'turbo_frame/messages.html' %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

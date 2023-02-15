@@ -1,0 +1,14 @@
+{% extends './base.html' %}
+
+{% block content %}
+<h1 class="text-4xl">Welcome</h1>
+
+<div>
+    {% for object in object_list %}
+        <p>
+            On {{ object.due_date|date:'d M, Y' }} at {{ object.due_date|date:'h:i:s' }}  : {{ object.title }}
+        </p>
+    {% empty %}
+    {% endfor %}
+</div>
+{% endblock %}

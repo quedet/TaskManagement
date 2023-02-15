@@ -1,0 +1,19 @@
+{% load webpack_loader static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stimulus Counter</title>
+    {% stylesheet_pack 'stimulus_basic' attrs='data-turbo-track="reload"'%}
+    {% javascript_pack 'stimulus_basic' attrs='data-turbo-track="reload" defer' %}
+</head>
+<body>
+    {% include 'stimulus_basic/navbar.html' %}
+
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

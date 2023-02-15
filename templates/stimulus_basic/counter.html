@@ -1,0 +1,22 @@
+{% extends "stimulus_basic/base.html" %}
+
+{% block content %}
+<div class="w-full max-w-7xl mx-auto px-4">
+    <h1 class="text-4xl sm:text-6xl lg:text-7xl mb-6">Counter</h1>
+
+    <button type="button" role="button" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg" 
+        data-controller="counter"
+        data-action="click->counter#increment"
+    >
+        You clicked <span class="font-bold" data-counter-target="count"></span> times!
+    </button>
+    
+    <h1 data-controller="counter" data-action="click->counter#increment" class="text-4xl sm:text-6xl lg:text-7xl mb-6">
+        You clicked <span class="font-bold" data-counter-target="count"></span> times!
+    </h1>
+
+    <div data-controller="counter" data-action="click->counter#increment" class="text-4xl">
+        You clicked <span class="font-bold" data-counter-target="count"></span> times!
+    </div>
+</div>
+{% endblock %}
