@@ -5,7 +5,9 @@ export default class extends Controller {
         count: { type: Number, default: 0 },
     };
 
-    static targets = ['count'];
+    static targets = ['count', 'initialDiv', 'progressDiv'];
+
+    static classes = ['hidden'];
 
     connect () {
         this.countTarget.innerHTML = this.countValue;
@@ -13,6 +15,11 @@ export default class extends Controller {
 
     countValueChanged (value, previousValue) {
         console.log(`${previousValue} changed to ${value}`);
+
+        if (value == 1) {
+            this.initialDivTarget.classList.add(this.hiddenClass);
+            this.progressDivTarget.classList.remove(this.hiddenClass);
+        }
     }
 
     increment () {
