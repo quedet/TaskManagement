@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'apps.turbo_frame',
 
     'apps.stimulus_basic',
-
+    'apps.stimulus_advanced',
 ]
 
 FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'

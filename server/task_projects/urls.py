@@ -23,5 +23,6 @@ urlpatterns = [
     path('turbo_drive/', include('apps.turbo_drive.urls', namespace='turbo-drive')),
     path('turbo_frame/', include('apps.turbo_frame.urls', namespace='turbo-frame')),
     path('stimulus_basic/', include('apps.stimulus_basic.urls', namespace='stimulus-basic')),
+    path('stimulus_advanced/', include('apps.stimulus_advanced.urls', namespace='stimulus-advanced')),
     path('admin/', admin.site.urls),
 ]
