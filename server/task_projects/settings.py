@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.forms',
 
     'webpack_boilerplate',
     'crispy_forms',
@@ -49,8 +50,11 @@ INSTALLED_APPS = [
     'apps.turbo_drive',
     'apps.turbo_frame',
 
-    'apps.stimulus_basic'
+    'apps.stimulus_basic',
+
 ]
+
+FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'tailwind'
 CRISPY_TEMPLATE_PACK = 'tailwind'
